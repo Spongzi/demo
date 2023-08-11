@@ -1,0 +1,28 @@
+### 获取余额
+GET http://localhost:8080/api/balance/1
+Accept: application/json
+
+### 消费
+POST http://localhost:8080/api/spend
+Content-Type: application/json
+
+{
+  "userId": 1,
+  "amount": "100"
+}
+
+
+### 退款
+POST http://localhost:8080/api/refund
+Content-Type: application/json
+
+{
+"userId": 1,
+"amount": "20"
+}
+
+### 查询用户钱包金额变动明细的接口
+GET http://localhost:8080/api/transactions?userId=1
+Accept: application/json
+
+
